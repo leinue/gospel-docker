@@ -15,4 +15,4 @@ RUN sudo ln -s `which nodejs` /usr/bin/node
 
 RUN echo 'root:123456' | chpasswd
 
-ENTRYPOINT service ssh start && cd /var/.gospel && git clone https://github.com/Gospely/.gospel && cd ./.gospel && mv * ../ && mv .c9 .eslintrc .git .nakignore ../ && cd ../ && rm -rf .gospel && git clone https//github.com/Gospely/installed ~/.c9 && /bin/bash 
+ENTRYPOINT service ssh start && git clone https://github.com/Gospely/workspace /var/workspace && git clone https://github.com/Gospely/installed ~/.c9 && cd /var/workspace && /bin/bash 
